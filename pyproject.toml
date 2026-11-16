@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "grover-sat"
+version = "1.0"
+description = "Grover's algorithm for satisfiability problems (boolean SAT and Sudoku) with PennyLane"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Gabriel A. Pedrosa" }]
+dependencies = ["pennylane>=0.44", "numpy>=2.0", "matplotlib>=3.9"]
+
+[project.optional-dependencies]
+# only needed to run the hardware cell in section 6 of the notebook
+hardware = ["pennylane-qiskit", "qiskit-ibm-runtime"]
+
+[tool.setuptools.packages.find]
+include = ["grover_sat*"]

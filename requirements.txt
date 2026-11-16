@@ -1,0 +1,6 @@
+numpy>=2.0
+pennylane>=0.44
+matplotlib>=3.9
+
+# optional, only for running the hardware cell in section 6 of the notebook:
+# pip install pennylane-qiskit qiskit-ibm-runtime
